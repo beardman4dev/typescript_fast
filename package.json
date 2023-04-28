@@ -1,16 +1,20 @@
 {
-  "name": "typescript_fast",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc:build": "tsc "
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "typescript": "^5.0.4"
-  }
+    "name": "typescript_fast",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "tsc:build": "rm -rf ./dist && tsc --build",
+        "tsc:watch": "tsc --watch",
+        "start": "node ./dist/main.js",
+        "start:mon": "nodemon ./dist/main.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "typescript": "^5.0.4",
+        "nodemon": "2.0.22"
+    }
 }

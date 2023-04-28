@@ -4,9 +4,10 @@
         "outDir": "./dist",
         "noEmitOnError": true,
         "target": "es5",
-        "watch": true,
+        "watch": false,
         "allowJs": true,
         "checkJs": true,
-        "lib": ["dom", "es2015"]
+        "lib": ["dom", "es2015"],
+        "strictNullChecks": true
     }
 }
