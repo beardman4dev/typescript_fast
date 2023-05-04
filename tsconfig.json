@@ -3,11 +3,16 @@
         "baseUrl": "src",
         "outDir": "./dist",
         "noEmitOnError": true,
-        "target": "es5",
+        "module": "CommonJS",
+        "target": "es6",
         "watch": false,
         "allowJs": true,
-        "checkJs": true,
+        "checkJs": false,
         "lib": ["dom", "es2015"],
-        "strictNullChecks": true
+        "strictNullChecks": true,
+        "declaration": true
+
+        // "moduleResolution": "node"
     }
+    // "exclude": ["node_modules", ".vscode"]
 }

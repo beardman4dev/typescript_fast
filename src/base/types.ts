@@ -45,3 +45,34 @@ class Block {
         return { nonce: 3, hash: "hash" }
     }
 }
+
+// =============================================================================
+
+class Person2 {
+    name: string
+}
+class Customer2 {
+    name: string
+}
+
+const cust: Customer2 = new Person2()
+// or that
+const cust2: Customer2 = { name: "Mary" }
+const pers2: Person2 = { name: "John" }
+
+// =============================================================================
+
+class Person3 {
+    address: string
+}
+
+const isPerson = (object: any): object is Person => !!object && "address" in object
+
+const person3: Person3 = { address: "ololo" }
+
+if (isPerson(person3)) {
+    // Применяет защиту типа
+    console.log(person3.address) //Безопасно обращается к свойству address
+} else {
+    console.log("person3 is not a Person3")
+}
